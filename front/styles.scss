@@ -26,10 +26,32 @@ main{
 }
 
 .information{
+    &__categories{
+        & .category{
+            & .info{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
     // position: absolute;
     // right: 0;
 }
 
 .content{
+    & .questions{
+        &__data{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    & .answers{
+        &__data{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
     // display: block;
 }
