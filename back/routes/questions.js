@@ -3,7 +3,7 @@ const router = express.Router();
 const { sequelize } = require('../connect');
 
 router.get('/questions', (req, res) => {
-    sequelize.query('SELECT * FROM questions', {
+    sequelize.query('SELECT * FROM questions ORDER BY id_q DESC', {
         type: sequelize.QueryTypes.SELECT
     })
         .then((questions) => {

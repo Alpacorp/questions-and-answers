@@ -4,32 +4,259 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
         <title>Preguntas y Respuestas</title>
     </head>
     <body>
-        <section class="question">
-            <form action="" id="add">
-                <input type="email" id="email" placeholder="Tu correo elcetrónico">
-                <input type="text" id="name" placeholder="Tu nombre completo">
-                <input type="text" id="question" placeholder="Tu pregunta">
-                <label for="category">Categoría</label>
-                <select name="" id="">
-                    <option value="">Selecciona</option>
-                    <option value="Técnica">Técnica</option>
-                    <option value="Legal">Legal</option>
-                    <option value="Administrativa">Administrativa</option>
-                    <option value="Económica">Económica</option>
-                </select>
-                <button>
-                    Enviar Pregunta
-                </button>
-            </form>
-        </section>
-        <section class="information">
-            <h2>
-                CATEGORIAS
-            </h2>
-
-        </section>
+        <header>
+            <h1>Preguntas y Respuestas para todos</h1>
+            <h3>Registra tus datos y lanza tu pregunta</h3>
+            <h3>En esta maravillosa comunidad encontrarás alguien que te ayude a resolverla</h3>
+        </header>
+        <main>
+            <section class="question">
+                <form action="" id="add">
+                    <input type="email" id="email" placeholder="Tu correo elcetrónico">
+                    <input type="text" id="name" placeholder="Tu nombre completo">
+                    <textarea name="question" id="question" cols="20" rows="10" placeholder="Digita de forma clara tu pregunta"></textarea>
+                    <label for="category">Categoría</label>
+                    <select name="" id="">
+                        <option value="">Selecciona</option>
+                        <option value="Técnica">Técnica</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Administrativa">Administrativa</option>
+                        <option value="Económica">Económica</option>
+                    </select>
+                    <button>
+                        Enviar Pregunta
+                    </button>
+                </form>
+            </section>
+            <section class="content">
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+                <div class="questions">
+                    <h4 class="questions__name" id="nameQuestion">
+                        Alejandro Palacios
+                    </h4>
+                    <h5 class="questions__category" id="categoryQuestion">Técnica</h5>
+                    <p>Fecha:</p>
+                    <p class="questions__date" id="dateQuestion">12/01/21</p>
+                    <h2 class="questions__question">
+                        ¿Cúal es resultado de la suma de 2 +2?
+                    </h2>
+                </div>
+                <hr>
+                <div class="answers">
+                    <h4 class="answers__name" id="nameAnswer">
+                        Kevin Palacios
+                    </h4>
+                    <h4>
+                        ha respondido esto el
+                    </h4>
+                    <p class="answers__date">13/01/21</p>
+                    <h3 class="answers__answer">
+                        El resultado de esa suma es 4.
+                    </h3>
+                </div>
+                <hr>
+            </section>
+            <section class="information">
+                <div class="information__categories">
+                    <h2>
+                        CATEGORIAS
+                    </h2>
+                    <div class="category">
+                        <h3 class="title">
+                            <a href="">Técnica</a>
+                        </h3>
+                        <h5 class="info">
+                            <p id="quantity">2</p>
+                            <p id="word">Preguntas</p>
+                        </h5>
+                    </div>
+                    <div class="logo">
+                        <figure>
+                            <img src="" alt="logo de categoria Técnica">
+                        </figure>
+                    </div>
+                    <div>
+                        <h3 class="title">
+                            <a href="">Legal</a>
+                        </h3>
+                        <h5 class="info">
+                            <p id="quantity">4</p>
+                            <p id="word">Preguntas</p>
+                        </h5>
+                    </div>
+                    <div class="logo">
+                        <figure>
+                            <img src="" alt="logo de categoria legal">
+                        </figure>
+                    </div>
+                    <div>
+                        <h3 class="title">
+                            <a href="">Administrativa</a>
+                        </h3>
+                        <h5 class="info">
+                            <p id="quantity">7</p>
+                            <p id="word">Preguntas</p>
+                        </h5>
+                    </div>
+                    <div class="logo">
+                        <figure>
+                            <img src="" alt="logo de categoria Administrativa">
+                        </figure>
+                    </div>
+                    <div>
+                        <h3 class="title">
+                            <a href="">Económica</a>
+                        </h3>
+                        <h5 class="info">
+                            <p id="quantity">9</p>
+                            <p id="word">Preguntas</p>
+                        </h5>
+                    </div>
+                    <div class="logo">
+                        <figure>
+                            <img src="" alt="logo de categoria Económica">
+                        </figure>
+                    </div>
+                </div>
+                <div class="information__last">
+                    <h2 class="title">
+                        ULTIMA PREGUNTA
+                    </h2>
+                    <div class="info">
+                        <p id="lastQuestion">¿Cuánto es 2+2?</p>
+                        <a href="">Ver pregunta</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./logic.js"></script>
     </body>
 </html>
