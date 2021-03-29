@@ -24,3 +24,5 @@ ON DELETE RESTRICT ON UPDATE RESTRICT;
 INSERT INTO questions VALUES (null, null, 'alejo@gmail.com', 'Alejandro Palacios', '¿Cuanto es 2+2?', 'Técnicas');
 
 INSERT INTO answers VALUES (null, 1, null, 'zorro@gmail.com', 'Karen Palacios', '4');
+
+SELECT * FROM questions RIGHT JOIN answers ON questions.id_q = answers.id_q UNION SELECT * FROM questions LEFT JOIN answers ON questions.id_q = answers.id_q

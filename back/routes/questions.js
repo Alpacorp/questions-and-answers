@@ -47,7 +47,7 @@ router.get('/q/:id', (req, res)=>{
 });
 
 router.get('/questions-answers', (req, res)=>{
-    sequelize.query('SELECT * FROM questions LEFT JOIN answers ON questions.id_q = answers.id_q UNION SELECT * FROM questions RIGHT JOIN answers ON questions.id_q = answers.id_q', {
+    sequelize.query('SELECT * FROM questions LEFT JOIN answers ON questions.id_q = answers.id_q', {
         type: sequelize.QueryTypes.SELECT
     })
     .then((questions)=>{

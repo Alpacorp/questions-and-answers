@@ -5,22 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css">
-        <title>Preguntas y Respuestas</title>
+        <title>Pregunta Repo</title>
     </head>
     <body>
         <header>
-            <h1>Preguntas y Respuestas para todos</h1>
+            <h1>Pregunta Repo</h1>
+            <h2>Preguntas y Respuestas para todos</h2>
             <h3>Registra tus datos y lanza tu pregunta</h3>
             <h3>En esta maravillosa comunidad encontrarás alguien que te ayude a resolverla</h3>
         </header>
         <main>
             <section class="question">
-                <form action="" id="add">
-                    <input type="email" id="email" placeholder="Tu correo electrónico">
-                    <input type="text" id="name" placeholder="Tu nombre completo">
-                    <textarea name="question" id="question" cols="20" rows="10" placeholder="Digita de forma clara tu pregunta"></textarea>
+                <form action="" id="addQuestion">
+                    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    <input type="text" id="name" placeholder="Tu nombre completo" required>
+                    <textarea name="question" id="question" cols="20" rows="10" placeholder="Digita de forma clara tu pregunta" required></textarea>
                     <label for="category">Categoría</label>
-                    <select name="" id="">
+                    <select name="category" id="category" required>
                         <option value="">Selecciona</option>
                         <option value="Técnica">Técnica</option>
                         <option value="Legal">Legal</option>
@@ -34,185 +35,185 @@
             </section>
             <section
                 class="content" id="content"><!-- <div class="questions">
-                                            <div class="questions__data" id="questionsData">
-                                                <h4
-                                                    class="data-name" id="nameQuestion">Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question" id="textQuestion">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr>
-                                        <div class="questions">
-                                            <div class="questions__data">
-                                                <h4 class="data-name" id="nameQuestion">
-                                                    Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr>
-                                        <div class="questions">
-                                            <div class="questions__data">
-                                                <h4 class="data-name" id="nameQuestion">
-                                                    Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr>
-                                        <div class="questions">
-                                            <div class="questions__data">
-                                                <h4 class="data-name" id="nameQuestion">
-                                                    Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr>
-                                        <div class="questions">
-                                            <div class="questions__data">
-                                                <h4 class="data-name" id="nameQuestion">
-                                                    Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr>
-                                        <div class="questions">
-                                            <div class="questions__data">
-                                                <h4 class="data-name" id="nameQuestion">
-                                                    Alejandro Palacios
-                                                </h4>
-                                                <h5 class="data-category" id="categoryQuestion">Técnica</h5>
-                                                <p class="data-date">Fecha:
-                                                    <span class="date" id="dateQuestion">12/01/21</span>
-                                                </p>
-                                            </div>
-                                            <h2 class="questions__question">
-                                                ¿Cúal es resultado de la suma de 2 +2?
-                                            </h2>
-                                        </div>
-                                        <hr>
-                                        <div class="answers">
-                                            <div class="answers__data">
-                                                <h4 class="data-name" id="nameAnswer">
-                                                    Kevin Palacios
-                                                </h4>
-                                                <h4 class="data-date">
-                                                    &nbspha respondido esto el
-                                                    <span class="date">13/01/21</span>
-                                                </h4>
-                                            </div>
-                                            <h3 class="answers__answer">
-                                                El resultado de esa suma es 4.
-                                            </h3>
-                                        </div>
-                                        <hr> -->
+                                                                                                                                                <div class="questions__data" id="questionsData">
+                                                                                                                                                    <h4
+                                                                                                                                                        class="data-name" id="nameQuestion">Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question" id="textQuestion">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="questions">
+                                                                                                                                                <div class="questions__data">
+                                                                                                                                                    <h4 class="data-name" id="nameQuestion">
+                                                                                                                                                        Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="questions">
+                                                                                                                                                <div class="questions__data">
+                                                                                                                                                    <h4 class="data-name" id="nameQuestion">
+                                                                                                                                                        Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="questions">
+                                                                                                                                                <div class="questions__data">
+                                                                                                                                                    <h4 class="data-name" id="nameQuestion">
+                                                                                                                                                        Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="questions">
+                                                                                                                                                <div class="questions__data">
+                                                                                                                                                    <h4 class="data-name" id="nameQuestion">
+                                                                                                                                                        Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="questions">
+                                                                                                                                                <div class="questions__data">
+                                                                                                                                                    <h4 class="data-name" id="nameQuestion">
+                                                                                                                                                        Alejandro Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h5 class="data-category" id="categoryQuestion">Técnica</h5>
+                                                                                                                                                    <p class="data-date">Fecha:
+                                                                                                                                                        <span class="date" id="dateQuestion">12/01/21</span>
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                                <h2 class="questions__question">
+                                                                                                                                                    ¿Cúal es resultado de la suma de 2 +2?
+                                                                                                                                                </h2>
+                                                                                                                                            </div>
+                                                                                                                                            <hr>
+                                                                                                                                            <div class="answers">
+                                                                                                                                                <div class="answers__data">
+                                                                                                                                                    <h4 class="data-name" id="nameAnswer">
+                                                                                                                                                        Kevin Palacios
+                                                                                                                                                    </h4>
+                                                                                                                                                    <h4 class="data-date">
+                                                                                                                                                        &nbspha respondido esto el
+                                                                                                                                                        <span class="date">13/01/21</span>
+                                                                                                                                                    </h4>
+                                                                                                                                                </div>
+                                                                                                                                                <h3 class="answers__answer">
+                                                                                                                                                    El resultado de esa suma es 4.
+                                                                                                                                                </h3>
+                                                                                                                                            </div>
+                                                                                                                                            <hr> -->
             </section>
             <section class="information">
                 <div class="information__categories">

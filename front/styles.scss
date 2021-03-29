@@ -95,5 +95,11 @@ main{
             margin: 0 0 20px 0;
         }
     }
+    & .form__answers{
+        & form{
+            display: flex;
+            flex-direction: column;
+        }
+    }
     // display: block;
 }
