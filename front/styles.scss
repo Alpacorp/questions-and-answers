@@ -1,9 +1,10 @@
 :root{
-
+    margin: 0;
 }
 
 body{
-    // margin: 0;
+    background-color: #F3F3F3;
+
 }
 
 header{
@@ -27,10 +28,26 @@ main{
 
 .information{
     &__categories{
+        & h2{
+            margin: 10px 0;
+        }
         & .category{
+            & h3{
+                margin: 0;
+            }
             & .info{
                 display: flex;
                 align-items: center;
+            }
+            & .logo{
+                & figure{
+                    & img{
+                        width: 30px;
+                    }
+                }
+            }
+            & h5{
+                margin: 0;
             }
         }
     }
@@ -40,6 +57,21 @@ main{
 
 .content{
     & .questions{
+        background-color: #fff;
+        &__data{
+            & .data-name{
+                margin: 0;
+            }
+            & .data-category{
+                margin: 0;
+            }
+            & .data-date{
+                margin: 0;
+            }
+        }
+        &__question{
+            margin: 0 0 20px 0;
+        }
         &__data{
             display: flex;
             align-items: center;
@@ -47,10 +79,20 @@ main{
         }
     }
     & .answers{
+        background-color: #fff;
         &__data{
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            & .data-name{
+                margin: 0;
+            }
+            & .data-date{
+                margin: 0;    
+            }
+        }
+        &__answer{
+            margin: 0 0 20px 0;
         }
     }
     // display: block;

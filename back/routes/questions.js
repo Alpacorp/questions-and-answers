@@ -46,9 +46,23 @@ router.get('/q/:id', (req, res)=>{
     })
 });
 
+router.get('/questions-answers', (req, res)=>{
+    sequelize.query('SELECT * FROM questions LEFT JOIN answers ON questions.id_q = answers.id_q UNION SELECT * FROM questions RIGHT JOIN answers ON questions.id_q = answers.id_q', {
+        type: sequelize.QueryTypes.SELECT
+    })
+    .then((questions)=>{
+        res.status(200).json({
+            data: questions
+        })
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+});
+
 router.post('/question', (req, res) => {
     const { email, name, question, category } = req.body;
-    sequelize.query('INSERT INTO questions VALUES (null, null, ?, ?, ?, ?)', {
+    sequelize.query('INSERT INTO questions VALUES (null, now(), ?, ?, ?, ?)', {
         replacements: [email, name, question, category]
     })
         .then((question) => {
