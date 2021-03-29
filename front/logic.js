@@ -1,8 +1,5 @@
-const nameQuestion = document.getElementById('nameQuestion');
-const questionsData = document.getElementById('questionsData');
-const categoryQuestion = document.getElementById('categoryQuestion');
-const dateQuestion = document.getElementById('dateQuestion');
-const textQuestion = document.getElementById('textQuestion');
+// div render DOM questions and answers
+
 const content = document.getElementById('content');
 
 // add question variables
@@ -13,31 +10,21 @@ const nameP = document.getElementById('name');
 const category = document.getElementById('category');
 const question = document.getElementById('question');
 
-// add answer variables
-
-
-
 // endpoints
 
-const urlQuestions = 'http://localhost:7000/questions';
-const urlQuestionsAnswers = 'http://localhost:7000/questions-answers';
-const urlAddQuestion = 'http://localhost:7000/question';
-const urlAddAnswer = 'http://localhost:7000/answer';
-const urlprueba = 'http://localhost:7000/prueba';
-const urlAnswerId = 'http://localhost:7000/answer/';
+const urlQuestions = 'http://localhost:7000/questions/';
+const urlAddQuestion = 'http://localhost:7000/question/';
+const urlAddAnswer = 'http://localhost:7000/answer/';
 
 document.addEventListener('DOMContentLoaded', async ()=>{
     
     let res = await fetch(urlQuestions);
-    // let res = await fetch(urlQuestionsAnswers);
     let json = await res.json();
 
     for (let index = 0; index < json.data.length; index++) {
         const element = json.data[index];
 
-        const urlAnswer = urlAnswerId + `${element.id_q}`;
-
-        console.log(urlAnswer);
+        const urlAnswer = urlAddAnswer + `${element.id_q}`;
 
         let resA = await fetch(urlAnswer);
         let jsonRes = await resA.json();
@@ -53,8 +40,6 @@ document.addEventListener('DOMContentLoaded', async ()=>{
             elementRes = "";
         }
 
-        console.log(elementRes);
-
         let questions = document.createElement('div');
         questions.className = 'questions';
 
@@ -67,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
         nameQuestion.innerHTML = `${element.name_q}`;
         let categoryQuestion = document.createElement('h5');
         categoryQuestion.className = 'data-category';
-        categoryQuestion.setAttribute('div', 'categoryQuestion');
+        categoryQuestion.setAttribute('id', 'categoryQuestion');
         categoryQuestion.innerHTML = `${element.category}`;
         let dataDate = document.createElement('p');
         dataDate.className = 'data-date';
@@ -110,19 +95,23 @@ document.addEventListener('DOMContentLoaded', async ()=>{
         titleA.innerHTML = 'Deja tu respuesta y colabora con la comunidad';
         let form = document.createElement('form');
         form.setAttribute('id', 'addAnswer');
+        form.setAttribute('action', '')
         let mailA = document.createElement('input');
         mailA.setAttribute('type', 'email');
         mailA.setAttribute('placeholder', 'Ingresa tu correo electrónico');
         mailA.setAttribute('id', 'mailA');
+        mailA.setAttribute('required', '');
         let nameA = document.createElement('input');
         nameA.setAttribute('type', 'text');
         nameA.setAttribute('placeholder', 'Ingresa tu nombre completo');
         nameA.setAttribute('id', 'mameA');
+        nameA.setAttribute('required', '');
         let answer = document.createElement('textarea');
         answer.setAttribute('id', 'answer');
         answer.setAttribute('cols', '20');
         answer.setAttribute('rows', '5');
         answer.setAttribute('placeholder', 'Escribe tu respuesta');
+        answer.setAttribute('required', '');
         let buttonA = document.createElement('button');
         buttonA.innerHTML = 'Enviar Respuesta';
 
@@ -132,8 +121,6 @@ document.addEventListener('DOMContentLoaded', async ()=>{
         form.appendChild(nameA);
         form.appendChild(answer);
         form.appendChild(buttonA);
-
-        console.log(formA);
 
         // add html DOM
 
@@ -158,18 +145,29 @@ document.addEventListener('DOMContentLoaded', async ()=>{
             content.appendChild(answers);
         }
 
+        switch (categoryQuestion.innerHTML) {
+            case 'Técnica':
+                categoryQuestion.className = 'yellow';
+                break;
+            case 'Económica':
+                categoryQuestion.className = 'red';
+                break;
+            case 'Administrativa':
+                categoryQuestion.className = 'green';
+                break;
+            case 'Legal':
+                categoryQuestion.className = 'purple';
+                break;
+            default:
+                break;
+        }
+
         content.appendChild(hr);
 
         buttonA.addEventListener('click', async (event)=>{
             event.preventDefault()
 
-            // let res = await fetch(urlprueba);
-            // let json = await res.json();
-
             let idQuestion = `${element.id_q}`
-
-            console.log(idQuestion);
-            console.log(nameA.value);
 
             let nameAVal = nameA.value
         
@@ -180,19 +178,20 @@ document.addEventListener('DOMContentLoaded', async ()=>{
                         'Content-Type': 'application/json; charset=utf-8'
                     },
                     body: JSON.stringify({
-                        id_q: 111,
+                        id_q: idQuestion,
                         email: mailA.value,
                         name: nameAVal,
-                        answer: "55 años de edad"
+                        answer: answer.value
                     })
                 }
                 let res = await fetch(urlAddAnswer, options);
         
-                if (res.ok) {
+                if (mailA.value === '' || nameAVal === '' || answer.value === '') {
+                    alert("Información incompleta, no fue posible enviar respuesta")
+                    console.log("error al ingresar tu respuesta");
+                } else {
                     alert("Respuesta enviada correctamente");
                     location.reload();
-                } else {
-                    console.log("error al ingresar tu respuesta");
                 };
         
             } catch (error) {
