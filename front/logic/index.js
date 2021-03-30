@@ -18,12 +18,20 @@ const administrativa = document.getElementById('administrativa');
 const legal = document.getElementById('legal');
 const economica = document.getElementById('economica');
 
-// endpoints
+// local endpoints
 
-const urlQuestions = 'http://localhost:7000/questions/';
-const urlAddQuestion = 'http://localhost:7000/question/';
-const urlAddAnswer = 'http://localhost:7000/answer/';
-const urlGetQCategories = 'http://localhost:7000/questions/category/';
+// const urlQuestions = 'http://localhost:7000/questions/';
+// const urlAddQuestion = 'http://localhost:7000/question/';
+// const urlAddAnswer = 'http://localhost:7000/answer/';
+// const urlGetQCategories = 'http://localhost:7000/questions/category/';
+
+// deploy endpoints
+
+const urlQuestions = 'https://questions-and-answers-page.herokuapp.com/questions/';
+const urlAddQuestion = 'https://questions-and-answers-page.herokuapp.com/question/';
+const urlAddAnswer = 'https://questions-and-answers-page.herokuapp.com/answer/';
+const urlGetQCategories = 'https://questions-and-answers-page.herokuapp.com/questions/category/';
+
 
 document.addEventListener('DOMContentLoaded', async ()=>{
 
