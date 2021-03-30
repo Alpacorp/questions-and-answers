@@ -33,7 +33,7 @@ router.get('/question/:id', (req, res) => {
 
 router.get('/questions/category/:id', (req, res)=>{
     const id = req.params.id;
-    sequelize.query('SELECT * FROM questions WHERE category = ?', {
+    sequelize.query('SELECT * FROM questions WHERE category = ? ORDER BY id_q DESC', {
         replacements: [id]
     })
     .then((quantity)=>{

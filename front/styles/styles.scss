@@ -12,7 +12,7 @@ body{
 header{
     font-weight: 300;
     background-color: #0948B3;
-    background-image: linear-gradient(to top, rgba(209, 35, 35, 0.3), transparent), url('./images/action.png');
+    background-image: linear-gradient(to top, rgba(209, 35, 35, 0.3), transparent), url('../images/action.png');
     box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.62);
     text-align: left;
     padding: 20px 70px;
@@ -422,6 +422,16 @@ main{
         margin: 0 20px;
         & .questions__data{
             flex-wrap: wrap;
+            & .data-date{
+                &::after{
+                    content: "";
+                    width: 30px;
+                    height: 2px;
+                    background: #e441b9;
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
         }
     }
 }

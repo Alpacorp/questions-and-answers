@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     administrativa.innerHTML = `${jsonAdm.data.length}`;
     economica.innerHTML = `${jsonEco.data.length}`;
     
-    let res = await fetch(urlQuestions);
+    let res = await fetch(urlQuestions + 'category/' + 'Administrativa');
     let json = await res.json();
 
     let finalQuestion = json.data[0].question;
@@ -216,11 +216,11 @@ document.addEventListener('DOMContentLoaded', async ()=>{
                 }
         
                 if (mailA.value === '' || nameAVal === '' || answer.value === '') {
-                    alert("Información incompleta, no fue posible enviar respuesta")
-                } 
-                if (mailA.value === `${element.email_q}`) {
-                    alert("No puedes responder la misma pregunta que creaste estimado usuario " + `${element.email_q}`);
+                    alert("Información incompleta, no fue posible enviar respuesta");
                 }
+                    else if (mailA.value === `${element.email_q}`) {
+                        alert("No puedes responder la misma pregunta que creaste estimado usuario " + `${element.email_q}`);
+                    }
                 else {
                     alert("Respuesta enviada correctamente");
                     let res = await fetch(urlAddAnswer, options);
@@ -257,7 +257,7 @@ addQuestion.addEventListener('submit', async (event)=>{
             alert("Pregunta enviada correctamente");
             location.reload();
         } else {
-            console.log("error al ingresar los datos");
+            alert("Pregunta no pudo ser enviada");
         };
 
     } catch (error) {
