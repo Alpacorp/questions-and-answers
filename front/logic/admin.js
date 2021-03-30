@@ -17,13 +17,21 @@ const tecnica = document.getElementById('tecnica');
 const administrativa = document.getElementById('administrativa');
 const legal = document.getElementById('legal');
 const economica = document.getElementById('economica');
+const todas = document.getElementById('todas');
 
-// endpoints
+// local endpoints
 
-const urlQuestions = 'http://localhost:7000/questions/';
-const urlAddQuestion = 'http://localhost:7000/question/';
-const urlAddAnswer = 'http://localhost:7000/answer/';
-const urlGetQCategories = 'http://localhost:7000/questions/category/';
+// const urlQuestions = 'http://localhost:7000/questions/';
+// const urlAddQuestion = 'http://localhost:7000/question/';
+// const urlAddAnswer = 'http://localhost:7000/answer/';
+// const urlGetQCategories = 'http://localhost:7000/questions/category/';
+
+// deploy endpoints
+
+const urlQuestions = 'https://questions-and-answers-page.herokuapp.com/questions/';
+const urlAddQuestion = 'https://questions-and-answers-page.herokuapp.com/question/';
+const urlAddAnswer = 'https://questions-and-answers-page.herokuapp.com/answer/';
+const urlGetQCategories = 'https://questions-and-answers-page.herokuapp.com/questions/category/';
 
 document.addEventListener('DOMContentLoaded', async ()=>{
 
@@ -31,21 +39,25 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     let adm = urlGetQCategories + 'Administrativa';
     let leg = urlGetQCategories + 'Legal';
     let eco = urlGetQCategories + 'Económica';
+    let tod = urlQuestions;
 
     let resTec = await fetch(tec);
     let resAdm = await fetch(adm);
     let resLeg = await fetch(leg);
     let resEco = await fetch(eco);
+    let resTod = await fetch(tod);
 
     let jsonTec = await resTec.json();
     let jsonAdm = await resAdm.json();
     let jsonLeg = await resLeg.json();
     let jsonEco = await resEco.json();
+    let jsonTod = await resTod.json();
 
     tecnica.innerHTML = `${jsonTec.data.length}`;
     legal.innerHTML = `${jsonLeg.data.length}`;
     administrativa.innerHTML = `${jsonAdm.data.length}`;
     economica.innerHTML = `${jsonEco.data.length}`;
+    todas.innerHTML = `${jsonTod.data.length}`;
     
     let res = await fetch(urlQuestions + 'category/' + 'Administrativa');
     let json = await res.json();
