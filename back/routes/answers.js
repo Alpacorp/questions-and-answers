@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { sequelize } = require('../connect');
+const {validateSameUser} = require('../middlewares/middlewares')
 
 router.get('/answers', (req, res) => {
     sequelize.query('SELECT * FROM answers', {
@@ -31,7 +32,7 @@ router.get('/answer/:id', (req, res) => {
         })
 });
 
-router.post('/answer', (req, res) => {
+router.post('/answer', validateSameUser, (req, res) => {
     const { id_q, email, name, answer } = req.body;
     sequelize.query('INSERT INTO answers VALUES (null, ?, now(), ?, ?, ?)', {
         replacements: [id_q, email, name, answer]

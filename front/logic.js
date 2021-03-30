@@ -9,17 +9,50 @@ const email = document.getElementById('email');
 const nameP = document.getElementById('name');
 const category = document.getElementById('category');
 const question = document.getElementById('question');
+const lastQuestion = document.getElementById('lastQuestion');
+
+// count variable
+
+const tecnica = document.getElementById('tecnica');
+const administrativa = document.getElementById('administrativa');
+const legal = document.getElementById('legal');
+const economica = document.getElementById('economica');
 
 // endpoints
 
 const urlQuestions = 'http://localhost:7000/questions/';
 const urlAddQuestion = 'http://localhost:7000/question/';
 const urlAddAnswer = 'http://localhost:7000/answer/';
+const urlGetQCategories = 'http://localhost:7000/questions/category/';
 
 document.addEventListener('DOMContentLoaded', async ()=>{
+
+    let tec = urlGetQCategories + 'Técnica';
+    let adm = urlGetQCategories + 'Administrativa';
+    let leg = urlGetQCategories + 'Legal';
+    let eco = urlGetQCategories + 'Económica';
+
+    let resTec = await fetch(tec);
+    let resAdm = await fetch(adm);
+    let resLeg = await fetch(leg);
+    let resEco = await fetch(eco);
+
+    let jsonTec = await resTec.json();
+    let jsonAdm = await resAdm.json();
+    let jsonLeg = await resLeg.json();
+    let jsonEco = await resEco.json();
+
+    tecnica.innerHTML = `${jsonTec.data.length}`;
+    legal.innerHTML = `${jsonLeg.data.length}`;
+    administrativa.innerHTML = `${jsonAdm.data.length}`;
+    economica.innerHTML = `${jsonEco.data.length}`;
     
     let res = await fetch(urlQuestions);
     let json = await res.json();
+
+    let finalQuestion = json.data[0].question;
+
+    lastQuestion.innerHTML = `${finalQuestion}`;
 
     for (let index = 0; index < json.data.length; index++) {
         const element = json.data[index];
@@ -31,11 +64,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 
         let elementRes = jsonRes.data[0];
 
-        console.log(element);
-
         if (elementRes) {
-            elementRes = elementRes
-            console.log(elementRes.id_q);
+            elementRes = elementRes;
         }else{
             elementRes = "";
         }
@@ -184,13 +214,16 @@ document.addEventListener('DOMContentLoaded', async ()=>{
                         answer: answer.value
                     })
                 }
-                let res = await fetch(urlAddAnswer, options);
         
                 if (mailA.value === '' || nameAVal === '' || answer.value === '') {
                     alert("Información incompleta, no fue posible enviar respuesta")
-                    console.log("error al ingresar tu respuesta");
-                } else {
+                } 
+                if (mailA.value === `${element.email_q}`) {
+                    alert("No puedes responder la misma pregunta que creaste estimado usuario " + `${element.email_q}`);
+                }
+                else {
                     alert("Respuesta enviada correctamente");
+                    let res = await fetch(urlAddAnswer, options);
                     location.reload();
                 };
         

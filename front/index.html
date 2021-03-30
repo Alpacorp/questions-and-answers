@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,18 +19,21 @@
                 </figure>
             </div>
             <h2>Preguntas y respuestas para todos</h2>
-            <h3>Registra tus datos y lanza tu pregunta</h3>
-            <h3>en esta maravillosa comunidad te ayudaremos a resolverla</h3>
+            <h3>Registra tus datos y lanza tu pregunta,</h3>
+            <h3>en esta maravillosa comunidad te ayudaremos a resolverla.</h3>
+            <h3>Todo dentro de un marco de respeto y solidaridad.</h3>
         </header>
         <main>
             <section class="question">
-                <form action="" id="addQuestion">
+                <h2 class="title__section">
+                    REGISTRA TU PREGUNTA
+                </h2>
+                <form action="/" id="addQuestion">
                     <input type="email" id="email" placeholder="Tu correo electrónico" required>
                     <input type="text" id="name" placeholder="Tu nombre completo" required>
-                    <textarea name="question" id="question" cols="20" rows="10" placeholder="Digita de forma clara tu pregunta" required></textarea>
-                    <label for="category">Categoría</label>
+                    <textarea name="question" id="question" cols="20" rows="10" placeholder="Digita en este campo de forma clara y respetuosa tu pregunta" required></textarea>
                     <select name="category" id="category" required>
-                        <option value="">Selecciona</option>
+                        <option value="">Selecciona Una Categoría</option>
                         <option value="Técnica">Técnica</option>
                         <option value="Legal">Legal</option>
                         <option value="Administrativa">Administrativa</option>
@@ -41,10 +44,14 @@
                     </button>
                 </form>
             </section>
-            <section class="content" id="content"></section>
+            <section class="content" id="content">
+                <h2 class="title__section">
+                    FEED
+                </h2>
+            </section>
             <section class="information">
                 <div class="information__categories">
-                    <h2>
+                    <h2 class="title__section">
                         CATEGORÍAS
                     </h2>
                     <div class="category">
@@ -55,10 +62,8 @@
                         </div>
                         <div class="info">
                             <h5>
-                                <p>
-                                    <span id="quantity">2</span>
-                                    preguntas
-                                </p>
+                                <span id="tecnica"></span>
+                                preguntas
                             </h5>
                             <div class="logo">
                                 <figure>
@@ -75,10 +80,8 @@
                         </div>
                         <div class="info">
                             <h5>
-                                <p>
-                                    <span id="quantity">8</span>
-                                    preguntas
-                                </p>
+                                <span id="legal"></span>
+                                preguntas
                             </h5>
                             <div class="logo">
                                 <figure>
@@ -95,10 +98,8 @@
                         </div>
                         <div class="info">
                             <h5>
-                                <p>
-                                    <span id="quantity">5</span>
-                                    preguntas
-                                </p>
+                                <span id="administrativa"></span>
+                                preguntas
                             </h5>
                             <div class="logo">
                                 <figure>
@@ -115,10 +116,8 @@
                         </div>
                         <div class="info">
                             <h5>
-                                <p>
-                                    <span id="quantity">2</span>
-                                    preguntas
-                                </p>
+                                <span id="economica"></span>
+                                preguntas
                             </h5>
                             <div class="logo">
                                 <figure>
@@ -128,17 +127,17 @@
                         </div>
                     </div>
                     <div class="information__last">
-                        <h2 class="title">
+                        <h2 class="title__section">
                             ULTIMA PREGUNTA
                         </h2>
                         <div class="info">
-                            <p id="lastQuestion">¿Cuánto es 2+2?</p>
-                            <a href="">Ver pregunta</a>
+                            <p id="lastQuestion"></p>
+                            <a href="#content" class="hide">Ver Pregunta</a>
                         </div>
                     </div>
-                </section>
-            </main>
-            <script src="./logic.js"></script>
-        </body>
+                </div>
+            </section>
+        </main>
+        <script src="./logic.js"></script>
     </body>
 </html>
