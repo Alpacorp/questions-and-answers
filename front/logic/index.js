@@ -17,6 +17,7 @@ const tecnica = document.getElementById('tecnica');
 const administrativa = document.getElementById('administrativa');
 const legal = document.getElementById('legal');
 const economica = document.getElementById('economica');
+const todas = document.getElementById('todas');
 
 // local endpoints
 
@@ -59,6 +60,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     let json = await res.json();
 
     let finalQuestion = json.data[0].question;
+
+    todas.innerHTML = `${json.data.length}`;
 
     lastQuestion.innerHTML = `${finalQuestion}`;
 
