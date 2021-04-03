@@ -33,6 +33,13 @@ const urlAddQuestion = 'https://questions-and-answers-page.herokuapp.com/questio
 const urlAddAnswer = 'https://questions-and-answers-page.herokuapp.com/answer/';
 const urlGetQCategories = 'https://questions-and-answers-page.herokuapp.com/questions/category/';
 
+document.addEventListener('DOMContentLoaded', ()=>{
+    const loading = document.getElementById('loading');
+    setTimeout(()=>{
+        loading.setAttribute('class', 'hide');
+    }, 2500)
+});
+
 document.addEventListener('DOMContentLoaded', async ()=>{
 
     let tec = urlGetQCategories + 'Técnica';
