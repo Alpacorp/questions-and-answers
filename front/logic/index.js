@@ -33,6 +33,12 @@ const urlAddQuestion = 'https://questions-and-answers-page.herokuapp.com/questio
 const urlAddAnswer = 'https://questions-and-answers-page.herokuapp.com/answer/';
 const urlGetQCategories = 'https://questions-and-answers-page.herokuapp.com/questions/category/';
 
+window.addEventListener('DOMContentLoaded', ()=>{
+    console.log("cargando ...");
+    const loading = document.getElementById('loading');
+
+    loading.setAttribute('class', 'hide');
+});
 
 document.addEventListener('DOMContentLoaded', async ()=>{
 
