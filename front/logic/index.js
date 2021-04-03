@@ -34,10 +34,10 @@ const urlAddAnswer = 'https://questions-and-answers-page.herokuapp.com/answer/';
 const urlGetQCategories = 'https://questions-and-answers-page.herokuapp.com/questions/category/';
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    console.log("cargando d...");
     const loading = document.getElementById('loading');
-
-    loading.setAttribute('class', 'hide');
+    setTimeout(()=>{
+        loading.setAttribute('class', 'hide');
+    }, 2500)
 });
 
 document.addEventListener('DOMContentLoaded', async ()=>{
