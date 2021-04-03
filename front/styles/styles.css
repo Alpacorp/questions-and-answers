@@ -575,9 +575,6 @@ main {
   header h3 {
     line-height: 20px;
   }
-  .content {
-    margin: 0 20px;
-  }
   .content .questions__data {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
