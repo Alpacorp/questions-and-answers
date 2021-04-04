@@ -224,7 +224,6 @@ document.addEventListener('DOMContentLoaded', async ()=>{
                     headers: {
                         'Content-Type': 'application/json; charset=utf-8'
                     },
-                    mode: cors,
                     body: JSON.stringify({
                         id_q: idQuestion,
                         email: mailA.value,
